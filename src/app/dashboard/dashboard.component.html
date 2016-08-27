@@ -1,0 +1,9 @@
+<h3>Top Codes</h3>
+<div class="grid grid-pad">
+  <div *ngFor="let code of codes" (click)="gotoDetail(code)" class="col-1-4">
+    <div class="module code">
+      <h4>{{code.name}}</h4>
+    </div>
+  </div>
+</div>
+<code-search></code-search>

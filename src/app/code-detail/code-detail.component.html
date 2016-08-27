@@ -1,0 +1,15 @@
+<div *ngIf="code">
+  <h2>{{code.name}} details!</h2>
+  <div>
+    <label>id: </label>{{code.id}}</div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="code.name" placeholder="name" />
+  </div>
+  <div>
+    <label>value: </label>
+    <input [(ngModel)]="code.value" placeholder="value" />
+  </div>
+  <button (click)="goBack()">Back</button>
+  <button (click)="save()">Save</button>
+</div>

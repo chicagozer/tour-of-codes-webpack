@@ -1,0 +1,17 @@
+<h2>My Codes</h2>
+<ul class="codes">
+  <li *ngFor="let code of codes" (click)="gotoDetail(code)" [class.selected]="code === selectedCode">
+    <span class="code-element">
+      <span class="badge">{{code.id}}</span> {{code.name}}
+    </span>
+    <button class="delete-button" (click)="deleteCode(code, $event)">Delete</button>
+  </li>
+</ul>
+
+<div class="error" *ngIf="error">{{error}}</div>
+<button (click)="addCode()">Add New Code</button>
+<div *ngIf="addingCode">
+  <my-code-detail (close)="close($event)"></my-code-detail>
+</div>
+
+
